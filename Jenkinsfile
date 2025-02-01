@@ -8,7 +8,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -t Jinny1/adservice:latest ."
+                        sh "docker build -t nothingone/adservice:latest ."
                     }
                 }
             }
@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push Jinny1/adservice:latest "
+                        sh "docker push nothingone/adservice:latest "
                     }
                 }
             }
