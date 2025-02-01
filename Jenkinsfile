@@ -8,7 +8,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -t jinny1/frontend:latest ."
+                        sh "docker build -t nothingone/frontend:latest ."
                     }
                 }
             }
@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push jinny1/frontend:latest"
+                        sh "docker push nothingone/frontend:latest"
                     }
                 }
             }
